@@ -36,7 +36,7 @@ var GameManager = /** @class */ (function () {
             if (message.type === messages_1.MOVE) {
                 var game = _this.games.find(function (game) { return game.player1 === socket || game.player2 === socket; });
                 if (game) {
-                    game.makeMove(socket, message.move);
+                    game.makeMove(socket, message.payload.move);
                 }
             }
         });
